@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --bg-primary: rgb(29, 28, 33);
+    --text-primary: rgba(245, 245, 245, 0.85);
+    --border-color: rgba(245, 245, 245, 0.15);
+
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --bgfill-color: rgba(0, 255, 102, 0.856);
+    --bgfood-color: rgba(255, 0, 0, 0.5);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Courier New", Courier, monospace;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+.btn {
+    padding: var(--space-md);
+    border: none;
+    border-radius: var(--space-sm);
+    background-color: var(--bgfill-color);
+    color: var(--text-primary);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: var(--bgfood-color);
+    
+    color: var(--text-primary);
+    transition: scale (1.5);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+
+    padding: var(--space-2xl);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--space-md);
+
+    border: 1px solid var(--border-color);
+    border-radius: var(--space-sm);
+}
+
+.board {
+   flex-grow: 1;
+   border-bottom: 1px solid white;
+
+    border: 1px solid var(--border-color);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+
+
+    
+}
+
+.block {
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid var(--border-color);
+}
+
+.fill{
+    background-color: var(--bgfill-color);
+}
+.food{
+    background-color: var(--bgfood-color);
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.modal .start_game ,
+.modal .game_over  {
+    background-color: var(--bg-primary);
+    padding: var(--space-2xl);
+    border-radius: var(--space-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.modal .game_over {
+    display: none;
+}
