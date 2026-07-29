@@ -5,18 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake Game</title>
+    <meta name="theme-color" content="#050816" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    
     <main>
         <section>
-            <div class="infos">
-                <div class="info">
+            <div class="hero-panel">
+                <p class="eyebrow">Neon Arcade</p>
+                <div class="infos">
+                    <div class="info">
                     <h3>
                         High Score:
-                        <span id="High Score">0</span>
+                        <span id="High_Score">0</span>
                     </h3>
                     <h3>
                         Score:
@@ -26,24 +28,29 @@
                         Time:
                         <span id="Time">00:00</span>
                     </h3>
+                    </div>
                 </div>
+                <p class="subtext">Survive the grid. Chase the glow. Beat your last run.</p>
             </div>
-            <div class="board">
-              
+            <div class="board-shell">
+                <div class="board"></div>
             </div>
         </section>
         <div class="modal">
-            <div class="start_game">
+            <div class="start_game modal-card">
                 <h2>Welcome to Snake Game</h2>
+                <p>Dodge, grow, and keep the neon line alive.</p>
                 <button class="btn">Start Game</button>
             </div>
-            <div class="game_over">
+            <div class="game_over modal-card">
                 <h2>Game Over</h2>
+                <p>Run ended. Restart and push for a higher score.</p>
                 <button class="btn">Restart Game</button>
             </div>
         </div>
     </main>
     <script src="script.js"></script>
+    <script src="ui-effects.js"></script>
 </body>
 
 </html>
