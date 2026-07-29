@@ -19,10 +19,7 @@ A neon-styled Snake game built with plain HTML, CSS, and JavaScript. The game tr
 
 ## How To Run
 
-1. Open the project folder in VS Code or any code editor.
-2. Open `index.html` in a browser, or use a local preview server.
-3. Click `Start Game` to begin.
-4. Play the live version here: https://snake-game-2-0-eh6d.vercel.app
+1. Play the live version here: https://snake-game-2-0-eh6d.vercel.app
 
 ## Project Structure
 
